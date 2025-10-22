@@ -1,0 +1,57 @@
+/* Styles specific to the Almoco page */
+body {
+    background-color: #fff8f0;
+}
+
+.section-title {
+    color: #b85c38;
+    font-weight: bold;
+}
+
+.products-carousel .product-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+.products-carousel .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.products-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(139, 75, 59, 0.9);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.products-nav:hover {
+    background: #8B4B3B;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.products-nav.prev {
+    left: -20px;
+}
+
+.products-nav.next {
+    right: -20px;
+}
