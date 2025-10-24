@@ -1,0 +1,58 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Pão Francês",
+      "description": "Pão francês tradicional, crocante por fora e macio por dentro.",
+      "price": 0.50,
+      "category": "Pães",
+      "image": "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=300&h=200&fit=crop",
+      "active": true
+    },
+    {
+      "id": 2,
+      "name": "Croissant",
+      "description": "Croissant folhado francês, perfeito para o café da manhã.",
+      "price": 3.50,
+      "category": "Pães",
+      "image": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=300&h=200&fit=crop",
+      "active": true
+    },
+    {
+      "id": 3,
+      "name": "Bolo de Chocolate",
+      "description": "Bolo de chocolate caseiro com cobertura cremosa.",
+      "price": 25.00,
+      "category": "Doces",
+      "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=300&h=200&fit=crop",
+      "active": true
+    },
+    {
+      "id": 4,
+      "name": "Pão de Queijo",
+      "description": "Pão de queijo mineiro tradicional, quentinho.",
+      "price": 1.00,
+      "category": "Salgados",
+      "image": "https://images.unsplash.com/photo-1587668178277-295251f900ce?w=300&h=200&fit=crop",
+      "active": true
+    },
+    {
+      "id": 5,
+      "name": "Café Expresso",
+      "description": "Café expresso forte e aromático.",
+      "price": 2.50,
+      "category": "Bebidas",
+      "image": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=300&h=200&fit=crop",
+      "active": true
+    },
+    {
+      "id": 6,
+      "name": "Torta de Frango",
+      "description": "Torta de frango com recheio cremoso e massa crocante.",
+      "price": 15.00,
+      "category": "Salgados",
+      "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=300&h=200&fit=crop",
+      "active": true
+    }
+  ]
+}

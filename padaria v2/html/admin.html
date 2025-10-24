@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padaria - Admin</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner" aria-label="Cabeçalho principal">
+        <div class="header-content">
+            <a href="../html/home.html" class="logo" aria-label="Página inicial da Padaria">Padaria</a>
+            <div class="auth-buttons">
+                <button class="btn btn-login" onclick="logout()">Sair</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1 class="page-title">Painel Administrativo</h1>
+            <p class="page-subtitle">Gerencie os produtos da padaria</p>
+        </div>
+
+        <!-- Add Product Section -->
+        <section class="admin-section">
+            <h2 class="section-title">Adicionar Novo Produto</h2>
+            <form id="addProductForm" class="product-form">
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="productName" class="form-label">Nome do Produto</label>
+                            <input type="text" id="productName" name="name" class="form-input" required>
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="productCategory" class="form-label">Categoria</label>
+                            <select id="productCategory" name="category" class="form-select" required>
+                                <option value="">Selecione uma categoria</option>
+                                <option value="Pães">Pães</option>
+                                <option value="Doces">Doces</option>
+                                <option value="Salgados">Salgados</option>
+                                <option value="Bebidas">Bebidas</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="productPrice" class="form-label">Preço (R$)</label>
+                            <input type="number" id="productPrice" name="price" class="form-input" step="0.01" min="0" required>
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="productImage" class="form-label">URL da Imagem</label>
+                            <input type="url" id="productImage" name="image" class="form-input" placeholder="https://exemplo.com/imagem.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="productDescription" class="form-label">Descrição</label>
+                    <textarea id="productDescription" name="description" class="form-textarea" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">
+                        <input type="checkbox" id="productActive" name="active" checked> Produto Ativo
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Adicionar Produto</button>
+            </form>
+        </section>
+
+        <!-- Products List Section -->
+        <section class="admin-section">
+            <h2 class="section-title">Produtos Cadastrados</h2>
+            <div id="productsList" class="products-list">
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Edit Product Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Editar Produto</h3>
+                <span class="close-btn" onclick="closeModal('editModal')">&times;</span>
+            </div>
+            <form id="editProductForm" class="product-form">
+                <input type="hidden" id="editProductId" name="id">
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="editProductName" class="form-label">Nome do Produto</label>
+                            <input type="text" id="editProductName" name="name" class="form-input" required>
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="editProductCategory" class="form-label">Categoria</label>
+                            <select id="editProductCategory" name="category" class="form-select" required>
+                                <option value="Pães">Pães</option>
+                                <option value="Doces">Doces</option>
+                                <option value="Salgados">Salgados</option>
+                                <option value="Bebidas">Bebidas</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="editProductPrice" class="form-label">Preço (R$)</label>
+                            <input type="number" id="editProductPrice" name="price" class="form-input" step="0.01" min="0" required>
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="editProductImage" class="form-label">URL da Imagem</label>
+                            <input type="url" id="editProductImage" name="image" class="form-input">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="editProductDescription" class="form-label">Descrição</label>
+                    <textarea id="editProductDescription" name="description" class="form-textarea" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">
+                        <input type="checkbox" id="editProductActive" name="active"> Produto Ativo
+                    </label>
+                </div>
+                <div class="modal-buttons">
+                    <button type="button" class="btn btn-danger" onclick="deleteProduct()">Excluir</button>
+                    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/admin.js"></script>
+</body>
+</html>
