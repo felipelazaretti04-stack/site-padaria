@@ -1,9 +1,4 @@
-# Color Palette Update Plan
-
-## Tasks to Complete
-- [x] Update css/home.css :root variables to use the new light palette
-- [x] Update hardcoded colors in css/sobreNos.css to light colors
-- [x] Update css/salgados.css colors
-- [x] Update css/sobremesas.css colors
-- [x] Check other CSS files for dark colors and update them
-- [x] Ensure the site remains light and welcoming
+- [x] Adicionar link CSS para mobile-menu.css no head de curiosidades.html
+- [x] Adicionar botão hambúrguer no header de curiosidades.html
+- [x] Adicionar overlay do menu móvel com links relevantes após o header em curiosidades.html
+- [x] Adicionar script mobile-menu.js no final do body de curiosidades.html

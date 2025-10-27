@@ -3,28 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Padaria - Curiosidades</title>
+    <title>Dorigon Panetteria - Curiosidades</title>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/curiosidades.css">
+    <link rel="stylesheet" href="../css/mobile-menu.css">
 </head>
 <body>
     <!-- Header -->
     <header class="header" role="banner" aria-label="Cabeçalho principal">
         <div class="header-content">
-            <a href="../html/home.html" class="logo" aria-label="Página inicial da Padaria">Padaria</a>
+    <a href="../html/home.html" class="logo" aria-label="Página inicial da Padaria">Dorigon Panetteria</a>
 
-            <div class="search-nav-container">
-                <div class="search-container" role="search" aria-label="Busca no site">
-                    <input type="search" class="search-box" placeholder="Pesquisar" aria-label="Campo de busca">
-                    <span class="search-icon" aria-hidden="true">🔍</span>
-                </div>
+    <div class="search-container" role="search" aria-label="Busca no site">
+        <input type="search" class="search-box" placeholder="Pesquisar" aria-label="Campo de busca">
+        <span class="search-icon" aria-hidden="true">🔍</span>
+    </div>
 
-                <nav class="header-nav">
-                    <a href="../html/sobreNos.html" class="header-link">Sobre Nós</a>
-                    <a href="../html/contato.html" class="header-link">Contato</a>
-                </nav>
-            </div>
-        </div>
+    <!-- Mobile Menu Button -->
+    <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </button>
+
+    <nav class="header-nav desktop-nav">
+        <a href="../html/sobreNos.html" class="header-link">Sobre Nós</a>
+        <a href="../html/contato.html" class="header-link">Contato</a>
+    </nav>
+</div>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu-overlay">
+    <nav class="mobile-menu">
+        <a href="../html/home.html" class="mobile-menu-link">Home</a>
+        <a href="../html/sobreNos.html" class="mobile-menu-link">Sobre Nós</a>
+        <a href="../html/contato.html" class="mobile-menu-link">Contato</a>
+        <a href="../html/almoco.html" class="mobile-menu-link">Almoço</a>
+        <a href="../html/sobremesas.html" class="mobile-menu-link">Sobremesas</a>
+        <a href="../html/salgados.html" class="mobile-menu-link">Salgados</a>
+        <a href="../html/bebidas.html" class="mobile-menu-link">Bebidas</a>
+        <a href="../html/curiosidades.html" class="mobile-menu-link">Curiosidades</a>
+    </nav>
+</div>
+
     </header>
 
     <!-- Navigation -->
@@ -63,116 +84,81 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
-        <!-- Newsletter Section -->
-        <div class="newsletter-section">
-            <div class="newsletter-content">
-                <h3 class="newsletter-title">RECEBA AS NOVIDADES E PROMOÇÕES PADARIA</h3>
-                <div class="newsletter-form">
-                    <input type="email" placeholder="seu e-mail..." class="newsletter-input">
-                    <button class="newsletter-btn">Inscrever</button>
+<footer class="footer">
+    <!-- Footer Main Content -->
+    <div class="footer-main">
+        <div class="footer-content">
+            <!-- Company Info -->
+            <div class="footer-column">
+                <div class="footer-logo">Dorigon Panetteria</div>
+
+                <div class="footer-section">
+                    <h4>Redes Sociais:</h4>
+                    <ul class="social-links">
+                        <li><a href="https://www.instagram.com/dorigonpanetteria?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="social-link" aria-label="Instagram">📷</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Empresa:</h4>
+                    <p>
+                        DORIGON PANETTERIA LTDA
+                    </p>
+                    <p>CNPJ: 46.551.097/0001-21</p>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-column">
+                <div class="footer-section">
+                    <h4>Endereço:</h4>
+                    <p>
+                        Avenida José Óscar Salazar, 1025<br>
+                        em Erechim, RS<br>
+                        99700-000
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Horário de Funcionamento:</h4>
+                    <p>Aberto de:<br>
+                       Segunda a Sexta: 07:00 às 20:30<br>
+                       Sábado: 07:00 às 20:00<br>
+                       Domingo: Fechado</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contatos:</h4>
+                    <p>54 99999-9999</p>
+                    <p>contato@dorigonpanetteria.com.br</p>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="footer-column">
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.0891820284747!2d-52.27964892451205!3d-27.63508837619857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e31569e8c8f8a9%3A0x7c4e4f4e4e4e4e4e!2sAv.%20Jos%C3%A9%20Oscar%20Salazar%2C%201025%20-%20S%C3%A3o%20Crist%C3%B3v%C3%A3o%2C%20Erechim%20-%20RS%2C%2099700-000!5e0!3m2!1spt-BR!2sbr!4v1698765432100!5m2!1spt-BR!2sbr"
+                        title="Localização da Dorigon Panetteria no Google Maps"
+                        class="footer-map" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Footer Main Content -->
-        <div class="footer-main">
-            <div class="footer-content">
-                <!-- Company Info -->
-                <div class="footer-column">
-                    <div class="footer-logo">Padaria</div>
-
-                    <div class="footer-section">
-                        <h4>Redes Sociais:</h4>
-                        <ul class="social-links">
-                            <li><a href="https://www.instagram.com/padariadorigon" class="social-link" aria-label="Instagram">📷</a></li>
-                            <li><a href="https://www.facebook.com/padariadorigon" class="social-link" aria-label="Facebook">📘</a></li>
-                            <li><a href="mailto:site@padariavianney.com.br" class="social-link" aria-label="Email">✉️</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-section">
-                        <p class="footer-text">
-                            Para pedidos urgentes chamar no<br>
-                            Whatsapp: <strong>99 99999-9999</strong>
-                        </p>
-
-                        <p class="footer-disclaimer">
-                            *Todos os produtos com promoção são válidos somente para encomendas realizadas no
-                            e-commerce. Os preços dos produtos constantes no site podem ser diferentes dos preços
-                            praticados na loja física.
-                        </p>
-                    </div>
-
-                    <div class="footer-section">
-                        <h4>Formas de Pagamento:</h4>
-                        <p>Cartão de Crédito</p>
-                        <ul class="payment-methods">
-                            <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/visa.svg" alt="Visa" class="payment-icon"></li>
-                            <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/mastercard.svg" alt="Mastercard" class="payment-icon"></li>
-                            <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/americanexpress.svg" alt="American Express" class="payment-icon"></li>
-                            <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/dinersclub.svg" alt="Diners" class="payment-icon"></li>
-                            <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/discover.svg" alt="Discover" class="payment-icon"></li>
-                            <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/jcb.svg" alt="JCB" class="payment-icon"></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Contact Info -->
-                <div class="footer-column">
-                    <div class="footer-section">
-                        <h4>Endereço:</h4>
-                        <p>
-                            Rua dos Aimorés, 200<br>
-                            Funcionários, Belo Horizonte/MG<br>
-                            30140-070
-                        </p>
-                    </div>
-
-                    <div class="footer-section">
-                        <h4>Horário de Funcionamento:</h4>
-                        <p>Aberto de 06:00 às 22:00</p>
-                    </div>
-
-                    <div class="footer-section">
-                        <h4>Contatos:</h4>
-                        <p>31 3227-2071</p>
-                        <p>site@padariavianney.com.br</p>
-                    </div>
-
-                    <div class="footer-section">
-                        <h4>Empresa:</h4>
-                        <p>
-                            MARIA DA CONCEIÇÃO XAVIER C<br>
-                            PADARIA E RESTAURANTE LTDA
-                        </p>
-                        <p>CNPJ: 46.551.097/0001-21</p>
-                    </div>
-                </div>
-
-                <!-- Map -->
-                <div class="footer-column">
-                    <div class="map-container">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3750.0556789!2d-43.9378!3d-19.9367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDU2JzEyLjEiUyA0M8KwNTYnMTYuMSJX!5e0!3m2!1spt-BR!2sbr!4v1234567890" title="Localização da Padaria no Google Maps"
-                            class="footer-map" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
-                </div>
-            </div>
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <div class="footer-links">
+            <a href="../html/home.html" class="footer-link">Início</a>
         </div>
-
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-            <div class="footer-links">
-                <a href="../html/home.html" class="footer-link">Início</a>
-                <a href="../html/blog.html" class="footer-link">Blog</a>
-                <a href="../html/politica.html" class="footer-link">Política de cancelamento de pedidos/troca/devolução</a>
-            </div>
-        </div>
-    </footer>
+    </div>
+</footer>
 
     <script src="../js/curiosidades.js"></script>
+    <script src="../js/mobile-menu.js"></script>
 </body>
 </html>

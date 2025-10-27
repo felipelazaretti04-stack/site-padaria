@@ -651,6 +651,21 @@ a:active {
     color: var(--secondary-yellow);
 }
 
+/* Map Styles */
+.map-container {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.footer-map {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 /* WhatsApp Float */
 .whatsapp-float {
     position: fixed;

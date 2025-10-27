@@ -7,6 +7,7 @@
     <title>Padaria - Bebidas</title>
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/cliente_produtos.css" />
+    <link rel="stylesheet" href="../css/mobile-menu.css" />
 </head>
 
 <body>
@@ -14,15 +15,27 @@
     <header class="header">
         <div class="header-content">
             <a href="../html/home.html" class="logo">Padaria</a>
-            <div class="search-container">
-                <input type="text" class="search-box" placeholder="Pesquisar" />
-                <span class="search-icon">🔍</span>
+            <div class="search-nav-container">
+                <div class="search-container">
+                    <input type="text" class="search-box" placeholder="Pesquisar" />
+                    <span class="search-icon">🔍</span>
+                </div>
+                <nav class="header-nav">
+                    <a href="../html/home.html" class="header-link">Home</a>
+                    <a href="../html/sobreNos.html" class="header-link">Sobre Nós</a>
+                    <a href="../html/contato.html" class="header-link">Contato</a>
+                </nav>
             </div>
+            <button class="hamburger" id="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
         </div>
     </header>
 
     <!-- Navigation -->
-    <nav class="nav">
+    <nav class="nav desktop-nav">
         <div class="nav-content">
             <div class="nav-primary">
                 <a href="almoco.html" class="nav-item">Almoço</a>
@@ -32,6 +45,19 @@
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu">
+            <a href="../html/home.html" class="mobile-menu-link">Home</a>
+            <a href="../html/sobreNos.html" class="mobile-menu-link">Sobre Nós</a>
+            <a href="../html/contato.html" class="mobile-menu-link">Contato</a>
+            <a href="almoco.html" class="mobile-menu-link">Almoço</a>
+            <a href="sobremesas.html" class="mobile-menu-link">Sobremesas</a>
+            <a href="salgados.html" class="mobile-menu-link">Salgados</a>
+            <a href="bebidas.html" class="mobile-menu-link">Bebidas</a>
+        </div>
+    </div>
 
     <!-- Main Content -->
     <main class="main-content">
@@ -46,12 +72,6 @@
                     <div class="product-category">Bebidas</div>
                     <h3 class="product-title">Suco Natural de Laranja</h3>
                     <p class="product-description">Suco natural de laranja fresca, sem conservantes ou açúcares adicionados.</p>
-                    <div class="product-price">
-                        <div class="price-container">
-                            <div class="current-price">R$ 8,00</div>
-                            <div class="price-unit">Copo 300ml</div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -61,12 +81,6 @@
                     <div class="product-category">Bebidas</div>
                     <h3 class="product-title">Refrigerante Zero Açúcar</h3>
                     <p class="product-description">Refrigerante tradicional sem açúcar, perfeito para quem cuida da saúde.</p>
-                    <div class="product-price">
-                        <div class="price-container">
-                            <div class="current-price">R$ 6,00</div>
-                            <div class="price-unit">Lata 350ml</div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -76,12 +90,6 @@
                     <div class="product-category">Bebidas</div>
                     <h3 class="product-title">Cerveja Artesanal</h3>
                     <p class="product-description">Cerveja artesanal produzida localmente, com sabor único e qualidade premium.</p>
-                    <div class="product-price">
-                        <div class="price-container">
-                            <div class="current-price">R$ 12,00</div>
-                            <div class="price-unit">Garrafa 600ml</div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -91,12 +99,6 @@
                     <div class="product-category">Bebidas</div>
                     <h3 class="product-title">Café Expresso</h3>
                     <p class="product-description">Café expresso tradicional, preparado com grãos selecionados e torrados na casa.</p>
-                    <div class="product-price">
-                        <div class="price-container">
-                            <div class="current-price">R$ 4,50</div>
-                            <div class="price-unit">Copo 50ml</div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -106,12 +108,6 @@
                     <div class="product-category">Bebidas</div>
                     <h3 class="product-title">Chá Gelado</h3>
                     <p class="product-description">Chá gelado refrescante, preparado com ervas naturais e frutas frescas.</p>
-                    <div class="product-price">
-                        <div class="price-container">
-                            <div class="current-price">R$ 7,00</div>
-                            <div class="price-unit">Copo 400ml</div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -122,13 +118,6 @@
                     <div class="product-category">Bebidas</div>
                     <h3 class="product-title">Milkshake Especial</h3>
                     <p class="product-description">Milkshake cremoso feito com sorvete premium e frutas frescas da estação.</p>
-                    <div class="product-price">
-                        <div class="price-container">
-                            <div class="old-price">R$ 15,00</div>
-                            <div class="current-price">R$ 12,00</div>
-                            <div class="price-unit">Copo 500ml</div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -210,5 +199,6 @@
     </footer>
 
     <script src="../js/cliente_produtos.js"></script>
+    <script src="../js/mobile-menu.js"></script>
 </body>
 </html>

@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Padaria - Almoço</title>
     <link rel="stylesheet" href="../css/common.css" />
-    <link rel="stylesheet" href="../css/cliente_produtos.css" />
+    <link rel="stylesheet" href="../css/almoco.css" />
+    <link rel="stylesheet" href="../css/mobile-menu.css" />
 </head>
 
 <body>
@@ -18,6 +19,15 @@
                 <input type="text" class="search-box" placeholder="Pesquisar" />
                 <span class="search-icon">🔍</span>
             </div>
+            <nav class="header-nav">
+                <a href="../html/sobreNos.html" class="header-link">Sobre Nós</a>
+                <a href="../html/contato.html" class="header-link">Contato</a>
+            </nav>
+            <button class="hamburger" id="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
         </div>
     </header>
 
@@ -33,6 +43,19 @@
         </div>
     </nav>
 
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu">
+            <a href="../html/home.html" class="mobile-menu-link">Home</a>
+            <a href="../html/sobreNos.html" class="mobile-menu-link">Sobre Nós</a>
+            <a href="../html/contato.html" class="mobile-menu-link">Contato</a>
+            <a href="almoco.html" class="mobile-menu-link">Almoço</a>
+            <a href="sobremesas.html" class="mobile-menu-link">Sobremesas</a>
+            <a href="salgados.html" class="mobile-menu-link">Salgados</a>
+            <a href="bebidas.html" class="mobile-menu-link">Bebidas</a>
+        </div>
+    </div>
+
     <!-- Main Content -->
     <main class="main-content">
         <div class="page-header">
@@ -47,12 +70,6 @@
                     <div class="product-category">Almoço</div>
                     <h3 class="product-title">Feijoada Completa</h3>
                     <p class="product-description">Feijoada completa com arroz, couve, farofa, laranja e torresmo. Prato tradicional brasileiro.</p>
-                    <div class="product-price">
-                        <div class="price-container">
-                            <div class="current-price">R$ 32,90</div>
-                            <div class="price-unit">Porção individual</div>
-                        </div>
-                    </div>
                 </div>
             </div>
             </a>
@@ -65,12 +82,6 @@
                     <div class="product-category">Almoço</div>
                     <h3 class="product-title">Strogonoff de Frango com Arroz</h3>
                     <p class="product-description">Strogonoff cremoso de frango com champignons, servido com arroz branco.</p>
-                    <div class="product-price">
-                        <div class="price-container">
-                            <div class="current-price">R$ 28,50</div>
-                            <div class="price-unit">Porção individual</div>
-                        </div>
-                    </div>
                 </div>
             </div>
             </a>
@@ -82,12 +93,6 @@
                     <div class="product-category">Almoço</div>
                     <h3 class="product-title">Lasanha à Bolonhesa</h3>
                     <p class="product-description">Lasanha artesanal com molho bolonhesa, queijo e presunto, assada no forno.</p>
-                    <div class="product-price">
-                        <div class="price-container">
-                            <div class="current-price">R$ 35,80</div>
-                            <div class="price-unit">Fatia grande</div>
-                        </div>
-                    </div>
                 </div>
             </div>
             </a>
@@ -99,12 +104,6 @@
                     <div class="product-category">Almoço</div>
                     <h3 class="product-title">Frango com Quiabo e Arroz</h3>
                     <p class="product-description">Frango caipira refogado com quiabo fresco, servido com arroz branco.</p>
-                    <div class="product-price">
-                        <div class="price-container">
-                            <div class="current-price">R$ 26,90</div>
-                            <div class="price-unit">Porção individual</div>
-                        </div>
-                    </div>
                 </div>
             </div>
             </a>
@@ -117,13 +116,6 @@
                     <div class="product-category">Almoço</div>
                     <h3 class="product-title">Bife à Parmegiana com Fritas</h3>
                     <p class="product-description">Bife empanado com molho de tomate, queijo e presunto, acompanhado de batatas fritas.</p>
-                    <div class="product-price">
-                        <div class="price-container">
-                            <div class="old-price">R$ 50,00</div>
-                            <div class="current-price">R$ 42,70</div>
-                            <div class="price-unit">Porção individual</div>
-                        </div>
-                    </div>
                 </div>
             </div>
             </a>
@@ -135,12 +127,6 @@
                     <div class="product-category">Almoço</div>
                     <h3 class="product-title">Prato Executivo do Dia</h3>
                     <p class="product-description">Prato executivo variado com proteína, acompanhamento e salada. Consulta a disponibilidade.</p>
-                    <div class="product-price">
-                       <div class="price-container">
-                            <div class="current-price">R$ 24,90</div>
-                            <div class="price-unit">Porção individual</div>
-                        </div>
-                    </div>
                 </div>
             </div>
             </a>
@@ -215,5 +201,6 @@
     </footer>
 
     <script src="../js/cliente_produtos.js"></script>
+    <script src="../js/mobile-menu.js"></script>
 </body>
 </html>

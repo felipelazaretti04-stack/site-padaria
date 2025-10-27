@@ -1,0 +1,119 @@
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 1001;
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.hamburger.active .hamburger-line:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-menu-overlay.active {
+    display: flex;
+}
+
+.mobile-menu {
+    background: var(--white);
+    padding: 40px 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-menu-link {
+    display: block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    transition: color 0.3s ease;
+}
+
+.mobile-menu-link:hover {
+    color: var(--secondary-color);
+}
+
+.mobile-menu-link:last-child {
+    border-bottom: none;
+}
+
+/* Responsividade para Mobile Menu */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex !important;
+        margin-left: -20px;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        flex-shrink: 0;
+    }
+
+    .search-container {
+        flex: 1;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .hamburger {
+        flex-shrink: 0;
+    }
+
+    .header-nav {
+        display: none;
+    }
+}

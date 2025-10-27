@@ -49,27 +49,10 @@
             observer.observe(el);
         });
 
-
-
-        function goToProducts() {
-            showNotification('Redirecionando para produtos...', 'success');
-            setTimeout(() => {
-                alert('Você será redirecionado para nossa página de produtos!\n\nDescubra todos os sabores artesanais da Vianncy.');
-            }, 1000);
-        }
-
-        function goToContact() {
-            showNotification('Redirecionando para contato...', 'success');
-            setTimeout(() => {
-                alert('Você será redirecionado para nossa página de contato!\n\nFale conosco e tire todas as suas dúvidas.');
-            }, 1000);
-        }
-
         // WhatsApp function
         function openWhatsApp() {
-            const message = 'Olá! Conheci a história da Vianncy e gostaria de saber mais sobre os produtos!';
+            const message = 'Olá! Vim pelo site e gostaria de saber mais sobre os produtos!';
             window.open(`https://wa.me/5531984059204?text=${encodeURIComponent(message)}`, '_blank');
-            showNotification('Abrindo WhatsApp...', 'success');
         }
 
         // Show notification
@@ -180,12 +163,6 @@
             }, 3000 + (index * 1000));
         });
 
-        // Initialize on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            // Show welcome message
-            setTimeout(() => {
-                showNotification('Bem-vindo à história da Vianncy! 🎉', 'success');
-            }, 1000);
 
             // Add scroll indicator
             const hero = document.querySelector('.hero-section');
@@ -237,7 +214,7 @@
                 const img = new Image();
                 img.src = src;
             });
-        });
+       
 
         // Keyboard shortcuts
         document.addEventListener('keydown', function(e) {

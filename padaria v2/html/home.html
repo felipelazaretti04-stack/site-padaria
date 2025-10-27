@@ -6,6 +6,7 @@
     <title>Padaria - Home</title>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/mobile-menu.css">
 </head>
 <body>
     <!-- Header -->
@@ -13,17 +14,34 @@
         <div class="header-content">
     <a href="../html/home.html" class="logo" aria-label="Página inicial da Padaria">Padaria</a>
 
-    <div class="search-nav-container">
-        <div class="search-container" role="search" aria-label="Busca no site">
-            <input type="search" class="search-box" placeholder="Pesquisar" aria-label="Campo de busca">
-            <span class="search-icon" aria-hidden="true">🔍</span>
-        </div>
-
-        <nav class="header-nav">
-            <a href="../html/sobreNos.html" class="header-link">Sobre Nós</a>
-            <a href="../html/contato.html" class="header-link">Contato</a>
-        </nav>
+    <div class="search-container" role="search" aria-label="Busca no site">
+        <input type="search" class="search-box" placeholder="Pesquisar" aria-label="Campo de busca">
+        <span class="search-icon" aria-hidden="true">🔍</span>
     </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </button>
+
+    <nav class="header-nav desktop-nav">
+        <a href="../html/sobreNos.html" class="header-link">Sobre Nós</a>
+        <a href="../html/contato.html" class="header-link">Contato</a>
+    </nav>
+</div>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu-overlay">
+    <nav class="mobile-menu">
+        <a href="../html/sobreNos.html" class="mobile-menu-link">Sobre Nós</a>
+        <a href="../html/contato.html" class="mobile-menu-link">Contato</a>
+        <a href="../html/almoco.html" class="mobile-menu-link">Almoço</a>
+        <a href="../html/sobremesas.html" class="mobile-menu-link">Sobremesas</a>
+        <a href="../html/salgados.html" class="mobile-menu-link">Salgados</a>
+        <a href="../html/bebidas.html" class="mobile-menu-link">Bebidas</a>
+    </nav>
 </div>
 
     </header>
@@ -270,6 +288,7 @@
     </footer>
 
     <script src="../js/home.js"></script>
+    <script src="../js/mobile-menu.js"></script>
 
 </body>
 
