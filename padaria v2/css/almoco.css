@@ -1,28 +1,43 @@
 :root {
-            --primary-color: #5B4033;
-            --primary-light: #7A5A4A;
-            --secondary-color: #E3A93C;
-            --secondary-light: #C89F6C;
-            --error-color: #e74c3c;
-            --error-dark: #d32f2f;
-            --success-color: #27AE60;
-            --text-color: #5B4033;
-            --text-light: #999;
-            --white: #FFFFFF;
-            --gray-light: #FFF8E7;
-            --gray-lighter: #E7DDC9;
-            --gray-dark: #ddd;
-            --shadow: rgba(0,0,0,0.1);
-            --shadow-dark: rgba(0,0,0,0.3);
-            --border-radius: 10px;
-            --border-radius-large: 20px;
-            --border-radius-xl: 25px;
-            --transition: all 0.3s ease;
-            --blue-primary: #508dff;
-            --blue-dark: #1900ff;
-            --whatsapp-green: #25D366;
-            --background-light: #FFF8E7;
-        }
+    /* Paleta inicial ajustada com marrom intermediário */
+    --primary-color: #a98552; /* Marrom intermediário entre original e claro */
+    --primary-light: #8B6F47; /* Marrom mais claro — hovers e gradientes */
+    --secondary-color: #E3A93C; /* Cor principal da paleta — botões, destaques e ícones */
+    --secondary-light: #F4E6C3; /* Fundo principal da paleta — hover e fundos leves */
+
+    /* Feedback */
+    --error-color: #D9534F;
+    --error-dark: #C9302C;
+    --success-color: #28A745;
+
+    /* Textos */
+    --text-color: #3C2E27; /* Textos e títulos da paleta */
+    --text-light: #7C5E4B; /* Marrom claro — textos secundários */
+
+    /* Neutros e fundos */
+    --white: #FFFFFF; /* Fundo secundário da paleta */
+    --gray-light: #F4E6C3; /* Fundo principal da paleta */
+    --gray-lighter: #DAD3C8; /* Bordas e detalhes sutis da paleta */
+    --gray-dark: #BBAA99; /* Bordas suaves */
+
+    /* Sombras e bordas */
+    --shadow: rgba(0, 0, 0, 0.08);
+    --shadow-dark: rgba(0, 0, 0, 0.15);
+
+    /* Bordas e transições */
+    --border-radius: 10px;
+    --border-radius-large: 20px;
+    --border-radius-xl: 25px;
+    --transition: all 0.3s ease;
+
+    /* Extras */
+    --blue-primary: #508dff;
+    --blue-dark: #1900ff;
+    --whatsapp-green: #25D366;
+
+    /* Fundo geral */
+    --background-light: #F4E6C3; /* Fundo principal da paleta */
+}
 
         * {
             margin: 0;
@@ -46,7 +61,7 @@
 
         /* Header */
         .header {
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            background: var(--primary-color);
             padding: 15px 0;
             box-shadow: 0 2px 10px var(--shadow);
             border-bottom: 1px solid var(--white);

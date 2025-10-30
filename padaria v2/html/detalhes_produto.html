@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/detalhes_produtos.css">
+    <link rel="stylesheet" href="../css/mobile-menu.css">
     <title>Padaria - Mini Sanduiche Focaccia</title>
 
 </head>
@@ -22,9 +23,30 @@
             <span class="search-icon" aria-hidden="true">🔍</span>
         </div>
 
-        <nav class="header-nav">
+        <!-- Mobile Menu Button -->
+        <button type="button" class="hamburger" aria-label="Abrir menu" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <nav class="header-nav desktop-nav">
             <a href="../html/sobreNos.html" class="header-link">Sobre Nós</a>
+            <a href="../html/curiosidades.html" class="header-link">Curiosidades</a>
             <a href="../html/contato.html" class="header-link">Contato</a>
+        </nav>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <nav class="mobile-menu">
+            <a href="../html/sobreNos.html" class="mobile-menu-link">Sobre Nós</a>
+            <a href="../html/curiosidades.html" class="mobile-menu-link">Curiosidades</a>
+            <a href="../html/contato.html" class="mobile-menu-link">Contato</a>
+            <a href="../html/almoco.html" class="mobile-menu-link">Almoço</a>
+            <a href="../html/sobremesas.html" class="mobile-menu-link">Sobremesas</a>
+            <a href="../html/salgados.html" class="mobile-menu-link">Salgados</a>
+            <a href="../html/bebidas.html" class="mobile-menu-link">Bebidas</a>
         </nav>
     </div>
 </div>
@@ -49,18 +71,22 @@
             <div class="product-gallery">
                 <div class="main-image-container">
                     <span class="discount-badge-large">-10%</span>
-                    <button class="favorite-btn-large" onclick="toggleFavorite()" id="favoriteBtn">♡</button>
+                    <button type="button" class="favorite-btn-large" onclick="toggleFavorite()" id="favoriteBtn">♡</button>
                     <img src="../imagem/mini_hamburguinhos.png"
                         alt="Mini Sanduiche" class="main-image" id="mainImage">
                 </div>
                 <div class="thumbnail-gallery">
                     <img src="../imagem/mini_hamburguinhos.png"
+                        alt="Mini sanduíche focaccia com pesto de pistache e queijo fresco - vista principal"
                         class="thumbnail active" onclick="changeImage(this)">
                     <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=150&h=150&fit=crop"
+                        alt="Mini sanduíche focaccia - vista lateral mostrando o recheio"
                         class="thumbnail" onclick="changeImage(this)">
                     <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=150&h=150&fit=crop"
+                        alt="Mini sanduíche focaccia - vista superior"
                         class="thumbnail" onclick="changeImage(this)">
                     <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=150&h=150&fit=crop"
+                        alt="Mini sanduíche focaccia - vista detalhada do pesto de pistache"
                         class="thumbnail" onclick="changeImage(this)">
                 </div>
             </div>
@@ -113,10 +139,10 @@
         <!-- Tabs Section -->
         <div class="tabs-section">
             <div class="tabs-header">
-                <button class="tab-btn active" onclick="showTab('description')">Descrição</button>
-                <button class="tab-btn" onclick="showTab('ingredients')">Ingredientes</button>
-                <button class="tab-btn" onclick="showTab('nutrition')">Informações Nutricionais</button>
-                <button class="tab-btn" onclick="showTab('reviews')">Avaliações (127)</button>
+                <button type="button" class="tab-btn active" onclick="showTab('description')">Descrição</button>
+                <button type="button" class="tab-btn" onclick="showTab('ingredients')">Ingredientes</button>
+                <button type="button" class="tab-btn" onclick="showTab('nutrition')">Informações Nutricionais</button>
+                <button type="button" class="tab-btn" onclick="showTab('reviews')">Avaliações (127)</button>
             </div>
 
             <div class="tab-content active" id="tab-description">
@@ -296,7 +322,7 @@
                     </div>
                 </div>
 
-                <button
+                <button type="button"
                     style="width: 100%; padding: 15px; background: #8B4B3B; color: white; border: none; border-radius: 10px; margin-top: 20px; cursor: pointer; font-weight: bold;"
                     onclick="showNotification('Faça login para deixar sua avaliação!', 'success')">
                     Escrever uma Avaliação
@@ -352,68 +378,84 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="newsletter-section">
-            <div class="newsletter-content">
-                <h3 class="newsletter-title">RECEBA AS NOVIDADES E PROMOÇÕES Padaria</h3>
-                <div class="newsletter-form">
-                    <input type="email" placeholder="seu e-mail..." class="newsletter-input" />
-                    <button class="newsletter-btn">Inscrever</button>
+<footer class="footer">
+    <!-- Footer Main Content -->
+    <div class="footer-main">
+        <div class="footer-content">
+            <!-- Company Info -->
+            <div class="footer-column">
+                <div class="footer-logo">Dorigon Panetteria</div>
+
+                <div class="footer-section">
+                    <h4>Redes Sociais:</h4>
+                    <ul class="social-links">
+                        <li><a href="https://www.instagram.com/dorigonpanetteria?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="social-link" aria-label="Instagram">📷</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Empresa:</h4>
+                    <p>
+                        DORIGON PANETTERIA LTDA
+                    </p>
+                    <p>CNPJ: 46.551.097/0001-21</p>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-column">
+                <div class="footer-section">
+                    <h4>Endereço:</h4>
+                    <p>
+                        Avenida José Óscar Salazar, 1025<br>
+                        em Erechim, RS<br>
+                        99700-000
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Horário de Funcionamento:</h4>
+                    <p>Aberto de:<br>
+                       Segunda a Sexta: 07:00 às 20:30<br>
+                       Sábado: 07:00 às 20:00<br>
+                       Domingo: Fechado</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contatos:</h4>
+                    <p>54 99999-9999</p>
+                    <p>contato@dorigonpanetteria.com.br</p>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="footer-column">
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.0891820284747!2d-52.27964892451205!3d-27.63508837619857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e31569e8c8f8a9%3A0x7c4e4f4e4e4e4e4e!2sAv.%20Jos%C3%A9%20Oscar%20Salazar%2C%201025%20-%20S%C3%A3o%20Crist%C3%B3v%C3%A3o%2C%20Erechim%20-%20RS%2C%2099700-000!5e0!3m2!1spt-BR!2sbr!4v1698765432100!5m2!1spt-BR!2sbr"
+                        title="Localização da Dorigon Panetteria no Google Maps"
+                        class="footer-map" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="footer-main">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <div class="footer-logo">Padaria</div>
-                    <div class="footer-section">
-                        <h4>Redes Sociais:</h4>
-                        <ul class="social-links">
-                            <li><a href="https://www.instagram.com/padariaPadaria" class="social-link">📷</a></li>
-                            <li><a href="https://www.facebook.com/padariaPadaria" class="social-link">📘</a></li>
-                            <li><a href="mailto:site@padariavianney.com.br" class="social-link">✉️</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <p class="footer-text">
-                            Para pedidos urgentes chamar no<br />
-                            Whatsapp: <strong>31 98405-9204</strong>
-                        </p>
-                        <p class="footer-disclaimer">
-                            *Todos os produtos com promoção são válidos somente para encomendas realizadas no e-commerce.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="footer-column">
-                    <div class="footer-section">
-                        <h4>Endereço:</h4>
-                        <p>Rua João, 999<br />Funcionários, São Paulo/SP<br />99999-9999</p>
-                    </div>
-                    <div class="footer-section">
-                        <h4>Horário de Funcionamento:</h4>
-                        <p>Aberto de 06:00 às 22:00</p>
-                    </div>
-                    <div class="footer-section">
-                        <h4>Contatos:</h4>
-                        <p>99 99999-9999</p>
-                        <p>site@padaria.com.br</p>
-                    </div>
-                </div>
-
-                <div class="footer-column">
-                    <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3750.0556789!2d-43.9378!3d-19.9367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDU2JzEyLjEiUyA0M8KwNTYnMTYuMSJX!5e0!3m2!1spt-BR!2sbr!4v1234567890" title="Localização da Padaria Padaria" class="footer-map" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                </div>
-            </div>
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <div class="footer-links">
+            <a href="../html/home.html" class="footer-link">Início</a>
         </div>
-    </footer>
+    </div>
+</footer>
 
     <!-- Scripts -->
 
     <script src="../js/detalhes_produtos.js"></script>
+    <script src="../js/mobile-menu.js"></script>
 
 </body>
 

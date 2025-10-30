@@ -12,14 +12,48 @@
 
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header" role="banner" aria-label="Cabeçalho principal">
         <div class="header-content">
-            <a href="../html/home.html" class="logo">Padaria</a>
-            <div class="search-container">
-                <input type="text" class="search-box" placeholder="Pesquisar" />
-                <span class="search-icon">🔍</span>
-            </div>
+    <a href="../html/home.html" class="logo" aria-label="Página inicial da Padaria">Padaria</a>
+
+    <div class="search-container" role="search" aria-label="Busca no site">
+        <input type="search" class="search-box" placeholder="Pesquisar" aria-label="Campo de busca">
+        <span class="search-icon" aria-hidden="true">🔍</span>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button type="button" class="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </button>
+
+    <nav class="header-nav desktop-nav">
+        <a href="../html/sobreNos.html" class="header-link">Sobre Nós</a>
+        <a href="../html/curiosidades.html" class="header-link">Curiosidades</a>
+        <a href="../html/contato.html" class="header-link">Contato</a>
+    </nav>
+</div>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu-overlay">
+    <nav class="mobile-menu">
+        <div class="mobile-menu-section">
+            <h3>Produtos</h3>
+            <a href="../html/almoco.html" class="mobile-menu-link">Almoço</a>
+            <a href="../html/sobremesas.html" class="mobile-menu-link">Sobremesas</a>
+            <a href="../html/salgados.html" class="mobile-menu-link">Salgados</a>
+            <a href="../html/bebidas.html" class="mobile-menu-link">Bebidas</a>
         </div>
+        <div class="mobile-menu-section">
+            <h3>Empresa</h3>
+            <a href="../html/sobreNos.html" class="mobile-menu-link">Sobre Nós</a>
+            <a href="../html/curiosidades.html" class="mobile-menu-link">Curiosidades</a>
+            <a href="../html/contato.html" class="mobile-menu-link">Contato</a>
+        </div>
+    </nav>
+</div>
+
     </header>
 
     <!-- Navigation -->
@@ -42,7 +76,7 @@
 
         <div class="products-container">
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop" alt="Bolo de Cenoura" class="product-image">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop" alt="Bolo de cenoura artesanal com cobertura de chocolate cremosa, preparado com cenouras frescas e ingredientes selecionados, doce tradicional brasileiro saudável e delicioso" class="product-image">
                 <div class="product-info">
                     <div class="product-category">Sobremesas</div>
                     <h3 class="product-title">Bolo de Cenoura com Cobertura de Chocolate</h3>
@@ -51,7 +85,7 @@
             </div>
 
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&h=300&fit=crop" alt="Torta de Chocolate" class="product-image">
+                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&h=300&fit=crop" alt="Torta de chocolate belga premium, rica e intensa, feita com chocolate belga de alta qualidade e recheio cremoso, sobremesa decadente para amantes de chocolate" class="product-image">
                 <div class="product-info">
                     <div class="product-category">Sobremesas</div>
                     <h3 class="product-title">Torta de Chocolate Belga Premium</h3>
@@ -60,7 +94,7 @@
             </div>
 
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=400&h=300&fit=crop" alt="Tiramisu" class="product-image">
+                <img src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=400&h=300&fit=crop" alt="Tiramisu tradicional italiano, com camadas de biscoitos champanhe embebidos em café, recheio de mascarpone e cacau em pó, sobremesa clássica europeia perfeita para finalizar refeições" class="product-image">
                 <div class="product-info">
                     <div class="product-category">Sobremesas</div>
                     <h3 class="product-title">Tiramisu Tradicional Italiano</h3>
@@ -69,7 +103,7 @@
             </div>
 
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&h=300&fit=crop" alt="Pudim de Leite" class="product-image">
+                <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&h=300&fit=crop" alt="Pudim de leite condensado tradicional, cremoso e dourado, preparado com leite condensado e leite fresco, sobremesa clássica brasileira com calda caramelizada" class="product-image">
                 <div class="product-info">
                     <div class="product-category">Sobremesas</div>
                     <h3 class="product-title">Pudim de Leite Condensado</h3>
@@ -78,7 +112,7 @@
             </div>
 
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1606673993554-a5f993a16e0d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWFyYWN1amF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500" alt="Mousse de Maracujá" class="product-image">
+                <img src="https://images.unsplash.com/photo-1606673993554-a5f993a16e0d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWFyYWN1amF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500" alt="Mousse de maracujá leve e refrescante, preparada com polpa de maracujá fresca e ingredientes naturais, sobremesa tropical brasileira com toque cítrico e cremoso" class="product-image">
                 <div class="product-info">
                     <div class="product-category">Sobremesas</div>
                     <h3 class="product-title">Mousse de Maracujá</h3>
@@ -88,7 +122,7 @@
 
             <div class="product-card">
                 <div class="discount-badge">-15%</div>
-                <img src="https://images.unsplash.com/photo-1602324338394-02a18d028467?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Q2hlZXNlY2FrZSUyMGRlJTIwRnJ1dGFzJTIwVmVybWVsaGFzfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500" alt="Cheesecake" class="product-image">
+                <img src="https://images.unsplash.com/photo-1602324338394-02a18d028467?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Q2hlZXNlY2FrZSUyMGRlJTIwRnJ1dGFzJTIwVmVybWVsaGFzfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500" alt="Cheesecake de frutas vermelhas com base crocante, recheio cremoso de cream cheese e cobertura de frutas frescas, sobremesa americana clássica com toque frutado e refrescante" class="product-image">
                 <div class="product-info">
                     <div class="product-category">Sobremesas</div>
                     <h3 class="product-title">Cheesecake de Frutas Vermelhas</h3>
@@ -106,73 +140,81 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="newsletter-section">
-            <div class="newsletter-content">
-                <h3 class="newsletter-title">RECEBA AS NOVIDADES E PROMOÇÕES Padaria</h3>
-                <div class="newsletter-form">
-                    <input type="email" placeholder="seu e-mail..." class="newsletter-input" />
-                    <button class="newsletter-btn">Inscrever</button>
+<footer class="footer">
+    <!-- Footer Main Content -->
+    <div class="footer-main">
+        <div class="footer-content">
+            <!-- Company Info -->
+            <div class="footer-column">
+                <div class="footer-logo">Dorigon Panetteria</div>
+
+                <div class="footer-section">
+                    <h4>Redes Sociais:</h4>
+                    <ul class="social-links">
+                        <li><a href="https://www.instagram.com/dorigonpanetteria?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="social-link" aria-label="Instagram">📷</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Empresa:</h4>
+                    <p>
+                        DORIGON PANETTERIA LTDA
+                    </p>
+                    <p>CNPJ: 46.551.097/0001-21</p>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-column">
+                <div class="footer-section">
+                    <h4>Endereço:</h4>
+                    <p>
+                        Avenida José Óscar Salazar, 1025<br>
+                        em Erechim, RS<br>
+                        99700-000
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Horário de Funcionamento:</h4>
+                    <p>Aberto de:<br>
+                       Segunda a Sexta: 07:00 às 20:30<br>
+                       Sábado: 07:00 às 20:00<br>
+                       Domingo: Fechado</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contatos:</h4>
+                    <p>54 99999-9999</p>
+                    <p>contato@dorigonpanetteria.com.br</p>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="footer-column">
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.0891820284747!2d-52.27964892451205!3d-27.63508837619857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e31569e8c8f8a9%3A0x7c4e4f4e4e4e4e4e!2sAv.%20Jos%C3%A9%20Oscar%20Salazar%2C%201025%20-%20S%C3%A3o%20Crist%C3%B3v%C3%A3o%2C%20Erechim%20-%20RS%2C%2099700-000!5e0!3m2!1spt-BR!2sbr!4v1698765432100!5m2!1spt-BR!2sbr"
+                        title="Localização da Dorigon Panetteria no Google Maps"
+                        class="footer-map" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="footer-main">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <div class="footer-logo">Padaria</div>
-                    <div class="footer-section">
-                        <h4>Redes Sociais:</h4>
-                        <ul class="social-links">
-                            <li><a href="https://www.instagram.com/padariaPadaria" class="social-link">📷</a></li>
-                            <li><a href="https://www.facebook.com/padariaPadaria" class="social-link">📘</a></li>
-                            <li><a href="mailto:site@padariavianney.com.br" class="social-link">✉️</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <p class="footer-text">
-                            Para pedidos urgentes chamar no<br />
-                            Whatsapp: <strong>31 98405-9204</strong>
-                        </p>
-                        <p class="footer-disclaimer">
-                            *Todos os produtos com promoção são válidos somente para encomendas realizadas no e-commerce.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="footer-column">
-                    <div class="footer-section">
-                        <h4>Endereço:</h4>
-                        <p>Rua dos Aimorés, 200<br />Funcionários, Belo Horizonte/MG<br />30140-070</p>
-                    </div>
-                    <div class="footer-section">
-                        <h4>Horário de Funcionamento:</h4>
-                        <p>Aberto de 06:00 às 22:00</p>
-                    </div>
-                    <div class="footer-section">
-                        <h4>Contatos:</h4>
-                        <p>31 3227-2071</p>
-                        <p>site@padariavianney.com.br</p>
-                    </div>
-                </div>
-
-                <div class="footer-column">
-                    <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3750.0556789!2d-43.9378!3d-19.9367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDU2JzEyLjEiUyA0M8KwNTYnMTYuMSJX!5e0!3m2!1spt-BR!2sbr!4v1234567890" title="Localização da Padaria Padaria" class="footer-map" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                </div>
-            </div>
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <div class="footer-links">
+            <a href="../html/home.html" class="footer-link">Início</a>
         </div>
+    </div>
+</footer>
 
-        <div class="footer-bottom">
-            <div class="footer-links">
-                <a href="../home.html" class="footer-link">Início</a>
-                <a href="../blog.html" class="footer-link">Blog</a>
-                <a href="../politica.html" class="footer-link">Política de cancelamento de pedidos/troca/devolução</a>
-            </div>
-        </div>
-    </footer>
-
+    <!-- Scripts -->
     <script src="../js/cliente_produtos.js"></script>
     <script src="../js/mobile-menu.js"></script>
 </body>

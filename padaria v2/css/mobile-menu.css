@@ -2,12 +2,19 @@
 .hamburger {
     display: none;
     flex-direction: column;
-    background: rgba(255,255,255,0.2);
-    border: none;
+    background: linear-gradient(135deg, var(--primary-brown), var(--primary-brown-light));
+    border: 2px solid var(--secondary-yellow);
     cursor: pointer;
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 10px;
     z-index: 1001;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.hamburger:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
 .hamburger-line {
@@ -52,26 +59,56 @@
 .mobile-menu {
     background: var(--white);
     padding: 40px 20px;
-    border-radius: 10px;
+    border-radius: 15px;
     width: 90%;
-    max-width: 300px;
+    max-width: 350px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    border: 2px solid var(--secondary-yellow);
+}
+
+.mobile-menu-section {
+    margin-bottom: 30px;
+}
+
+.mobile-menu-section:last-child {
+    margin-bottom: 0;
+}
+
+.mobile-menu-section h3 {
+    color: var(--primary-brown);
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--secondary-yellow);
 }
 
 .mobile-menu-link {
     display: block;
-    color: var(--primary-color);
+    color: var(--primary-brown);
     text-decoration: none;
     font-size: 18px;
     font-weight: 600;
-    padding: 15px 0;
-    border-bottom: 1px solid #eee;
-    transition: color 0.3s ease;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--gray-medium);
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    margin-bottom: 5px;
 }
 
 .mobile-menu-link:hover {
-    color: var(--secondary-color);
+    background: linear-gradient(135deg, var(--primary-brown), var(--primary-brown-light));
+    color: var(--white);
+    transform: translateX(5px);
+}
+
+.mobile-menu-link:active {
+    background: linear-gradient(135deg, var(--primary-brown-dark), var(--primary-brown));
+    color: var(--white);
+    transform: translateX(5px);
 }
 
 .mobile-menu-link:last-child {

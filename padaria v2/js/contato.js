@@ -176,13 +176,7 @@
             observer.observe(el);
         });
 
-        // Initialize on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            // Show welcome message
-            setTimeout(() => {
-                showNotification('Bem-vindo à página de contato! Estamos prontos para ajudar! 📞', 'success');
-            }, 1000);
-
+        // Initialize on page load  
             // Add hover effect to contact cards
             document.querySelectorAll('.contact-card').forEach(card => {
                 card.addEventListener('mouseenter', function() {
@@ -200,8 +194,7 @@
                 setTimeout(() => {
                     firstFaq.classList.add('active');
                 }, 1500);
-            }
-        });
+            };
 
         // Keyboard shortcuts
         document.addEventListener('keydown', function(e) {

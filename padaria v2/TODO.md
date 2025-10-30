@@ -2,3 +2,7 @@
 - [x] Adicionar botão hambúrguer no header de curiosidades.html
 - [x] Adicionar overlay do menu móvel com links relevantes após o header em curiosidades.html
 - [x] Adicionar script mobile-menu.js no final do body de curiosidades.html
+- [x] Implementar menu hambúrguer em contato.html
+- [x] Implementar menu hambúrguer em sobreNos.html
+- [x] Implementar menu hambúrguer em detalhes_produto.html
+- [x] Implementar menu hambúrguer em admin.html
