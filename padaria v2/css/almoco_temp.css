@@ -1,0 +1,176 @@
+/* CSS específico para a página de Almoço */
+
+:root {
+    /* Paleta inicial ajustada com marrom intermediário */
+    --primary-color: #9e7c4c;
+    --primary-light: #a48355;
+    --secondary-color: #E3A93C;
+    --secondary-light: #F4E6C3;
+
+    /* Feedback */
+    --error-color: #D9534F;
+    --error-dark: #C9302C;
+    --success-color: #28A745;
+
+    /* Textos */
+    --text-color: #3C2E27;
+    --text-light: #7C5E4B;
+
+    /* Neutros e fundos */
+    --white: #FFFFFF;
+    --gray-light: #F4E6C3;
+    --gray-lighter: #DAD3C8;
+    --gray-dark: #BBAA99;
+
+    /* Sombras e bordas */
+    --shadow: rgba(0, 0, 0, 0.08);
+    --shadow-dark: rgba(0, 0, 0, 0.15);
+
+    /* Bordas e transições */
+    --border-radius: 10px;
+    --border-radius-large: 20px;
+    --border-radius-xl: 25px;
+    --transition: all 0.3s ease;
+
+    /* Fundo geral */
+    --background-light: #F4E6C3;
+}
+
+/* Configurações gerais da página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-light);
+    box-sizing: border-box;
+}
+
+/* Estilos específicos para almoço */
+.almoco-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.almoco-titulo {
+    font-size: 32px;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.menu-item {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 8px 25px var(--shadow);
+    transition: var(--transition);
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px var(--shadow-dark);
+}
+
+.menu-item-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu-item-info {
+    padding: 25px;
+}
+
+.menu-item-nome {
+    font-size: 20px;
+    color: var(--text-color);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.menu-item-descricao {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.menu-item-preco {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.btn-pedir {
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-pedir:hover {
+    background: var(--primary-light);
+    transform: translateY(-2px);
+}
+
+/* Seção especial do dia */
+.especial-dia {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 40px 0;
+    margin: 60px 0;
+}
+
+.especial-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.especial-titulo {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.especial-descricao {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.btn-especial {
+    background: var(--white);
+    color: var(--primary-color);
+    padding: 15px 30px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.btn-especial:hover {
+    background: var(--gray-lighter);
+    transform: translateY(-2px);
+}

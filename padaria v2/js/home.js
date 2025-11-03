@@ -6,13 +6,17 @@
 
         // Main Carousel Functions
         function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateCarousel();
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                updateCarousel();
+            }
         }
 
         function prevSlide() {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            updateCarousel();
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateCarousel();
+            }
         }
 
         function updateCarousel() {
@@ -43,7 +47,8 @@
 
         // Auto-advance main carousel
         setInterval(() => {
-            nextSlide();
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
         }, 5000);
 
         // WhatsApp function

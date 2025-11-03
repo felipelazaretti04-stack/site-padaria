@@ -113,20 +113,22 @@
         }
 
         .search-box {
-            padding: 12px 50px 12px 20px;
-            border: none;
+            padding: 12px 20px;
+            border: 2px solid var(--gray-lighter);
             border-radius: var(--border-radius-xl);
             width: 300px;
             font-size: 14px;
             outline: none;
+            background: var(--white);
+            transition: border-color 0.3s ease;
+        }
+
+        .search-box:focus {
+            border-color: var(--secondary-color);
         }
 
         .search-icon {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--text-color);
+            display: none;
         }
 
         .auth-buttons {
@@ -213,6 +215,7 @@
             padding: 1px 0; /* antes 15px — reduzido para um topo mais fino */
             border-bottom: 1px solid var(--gray-lighter);
             box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* sombra mais leve */
+            width: 100%;
         }
 
         .nav-content {

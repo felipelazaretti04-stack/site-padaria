@@ -1,22 +1,40 @@
 // Admin Panel JavaScript
 
 // Simple authentication (in a real app, this would be server-side)
-const ADMIN_PASSWORD = "padaria123"; // Change this to a secure password
+const ADMIN_USERNAME = "padaria";
+const ADMIN_PASSWORD = "123";
 
 // Check authentication
 function checkAuth() {
     const isLoggedIn = sessionStorage.getItem('admin_logged_in');
-    if (!isLoggedIn) {
-        const password = prompt("Digite a senha do painel administrativo:");
-        if (password === ADMIN_PASSWORD) {
-            sessionStorage.setItem('admin_logged_in', 'true');
-        } else {
-            alert("Senha incorreta!");
-            window.location.href = '../html/home.html';
-            return false;
-        }
+    if (isLoggedIn) {
+        showAdminPanel();
+        return true;
     }
-    return true;
+    return false;
+}
+
+// Login function
+function login(event) {
+    event.preventDefault();
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const errorDiv = document.getElementById('login-error');
+
+    if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
+        sessionStorage.setItem('admin_logged_in', 'true');
+        showAdminPanel();
+    } else {
+        errorDiv.style.display = 'block';
+    }
+}
+
+// Show admin panel and hide login
+function showAdminPanel() {
+    document.getElementById('login-section').style.display = 'none';
+    document.getElementById('admin-panel').style.display = 'block';
+    initAdmin();
 }
 
 // Logout function
@@ -184,4 +202,13 @@ async function initAdmin() {
 }
 
 // Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', initAdmin);
+document.addEventListener('DOMContentLoaded', function() {
+    // Setup login form handler
+    const loginForm = document.getElementById('loginForm');
+    if (loginForm) {
+        loginForm.addEventListener('submit', login);
+    }
+
+    // Check if already logged in
+    checkAuth();
+});

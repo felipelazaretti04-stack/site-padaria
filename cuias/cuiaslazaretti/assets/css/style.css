@@ -1,0 +1,58 @@
+/* Tema marrom e bege */
+.bg-brown {
+    background-color: #8B4513 !important;
+}
+
+.text-brown {
+    color: #8B4513 !important;
+}
+
+.btn-brown {
+    background-color: #8B4513;
+    border-color: #8B4513;
+    color: white;
+}
+
+.btn-brown:hover {
+    background-color: #A0522D;
+    border-color: #A0522D;
+}
+
+.btn-beige {
+    background-color: #F5F5DC;
+    border-color: #F5F5DC;
+    color: #8B4513;
+}
+
+.btn-beige:hover {
+    background-color: #EEE8AA;
+    border-color: #EEE8AA;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .card-img-top {
+        height: 200px;
+        object-fit: cover;
+    }
+}
+
+/* Carrossel */
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Cards de produto */
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
