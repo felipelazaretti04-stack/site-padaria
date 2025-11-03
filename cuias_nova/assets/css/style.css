@@ -1,0 +1,174 @@
+/* Tema marrom e bege para CuiasLazaretti */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F5F5DC !important; /* Beige */
+    color: #333;
+}
+
+.bg-brown {
+    background-color: #8B4513 !important; /* Marrom */
+}
+
+.text-brown {
+    color: #8B4513 !important;
+}
+
+.bg-beige {
+    background-color: #F5F5DC !important; /* Beige */
+}
+
+.btn-brown {
+    background-color: #8B4513;
+    border-color: #8B4513;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn-brown:hover {
+    background-color: #A0522D;
+    border-color: #A0522D;
+    transform: scale(1.05);
+}
+
+.btn-outline-brown {
+    color: #8B4513;
+    border-color: #8B4513;
+    border-radius: 5px;
+}
+
+.btn-outline-brown:hover {
+    background-color: #8B4513;
+    border-color: #8B4513;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #8B4513 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    margin: 0 10px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #F5F5DC !important;
+}
+
+/* Carrossel */
+.carousel-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Cards de produtos */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    color: #8B4513;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #666;
+}
+
+/* Botões */
+.btn {
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #8B4513;
+    color: white;
+    padding: 40px 0;
+    margin-top: 50px;
+}
+
+footer h5 {
+    color: #F5F5DC;
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #F5F5DC;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+    .card {
+        margin-bottom: 1rem;
+    }
+    .carousel-item img {
+        height: 250px;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+/* Formulários */
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form-control:focus {
+    border-color: #8B4513;
+    box-shadow: 0 0 0 0.2rem rgba(139, 69, 19, 0.25);
+}
+
+/* Alertas */
+.alert {
+    border-radius: 5px;
+}

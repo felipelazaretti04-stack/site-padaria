@@ -1,8 +1,15 @@
-- [x] Adicionar link CSS para mobile-menu.css no head de curiosidades.html
-- [x] Adicionar botão hambúrguer no header de curiosidades.html
-- [x] Adicionar overlay do menu móvel com links relevantes após o header em curiosidades.html
-- [x] Adicionar script mobile-menu.js no final do body de curiosidades.html
-- [x] Implementar menu hambúrguer em contato.html
-- [x] Implementar menu hambúrguer em sobreNos.html
-- [x] Implementar menu hambúrguer em detalhes_produto.html
-- [x] Implementar menu hambúrguer em admin.html
+# TODO: Change almoco.html to paes.html and update references
+
+## Steps to Complete
+
+- [ ] Edit html/almoco.html: Change title to "Padaria - Pães", section title to "Pães Artesanais", replace product cards with bread products (Pão Francês, Pão de Queijo, Baguete, Pão Integral, Ciabatta, Pão Doce), update descriptions and alt texts.
+- [ ] Rename html/almoco.html to html/paes.html using command.
+- [ ] Update html/sobremesas.html: Change href from "almoco.html" to "paes.html", text from "Almoço" to "Pães".
+- [ ] Update html/sobreNos.html: Change href from "almoco.html" to "paes.html", text from "Almoço" to "Pães".
+- [ ] Update html/salgados.html: Change href from "almoco.html" to "paes.html", text from "Almoço" to "Pães".
+- [ ] Update html/home.html: Change href from "almoco.html" to "paes.html", text from "Almoço" to "Pães".
+- [ ] Update html/detalhes_produto.html: Change href from "almoco.html" to "paes.html", text from "Almoço" to "Pães".
+- [ ] Update html/curiosidades.html: Change href from "almoco.html" to "paes.html", text from "Almoço" to "Pães".
+- [ ] Update html/contato.html: Change href from "almoco.html" to "paes.html", text from "Almoço" to "Pães".
+- [ ] Update html/admin.html: Change href from "almoco.html" to "paes.html", text from "Almoço" to "Pães".
+- [ ] Test navigation on updated pages to ensure links work and text is correct.
