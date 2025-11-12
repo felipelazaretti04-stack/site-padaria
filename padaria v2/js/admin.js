@@ -77,22 +77,34 @@ function renderProducts(products) {
     const productsList = document.getElementById('productsList');
     if (!productsList) return;
 
-    productsList.innerHTML = products.map(product => `
+    productsList.innerHTML = products.map(product => {
+        // Handle image path - if it starts with 'images/', prepend '../'
+        let imageSrc = product.image || 'https://via.placeholder.com/300x200?text=Imagem+do+Produto';
+        if (imageSrc && imageSrc.startsWith('images/')) {
+            imageSrc = '../' + imageSrc;
+        }
+        
+        return `
         <div class="product-item ${product.active ? '' : 'inactive'}">
             <div class="status-badge ${product.active ? 'status-active' : 'status-inactive'}">
                 ${product.active ? 'Ativo' : 'Inativo'}
             </div>
-            <img src="${product.image || 'https://via.placeholder.com/300x200?text=Imagem+do+Produto'}" alt="${product.name}" class="product-image-admin">
-            <h3 class="product-name-admin">${product.name}</h3>
-            <div class="product-category-admin">${product.category}</div>
-            <div class="product-price-admin">R$ ${product.price.toFixed(2)}</div>
-            <p class="product-description-admin">${product.description}</p>
+            <div class="product-image-container">
+                <img src="${imageSrc}" alt="${product.name}" class="product-image-admin" onerror="this.src='https://via.placeholder.com/300x200?text=Imagem+Indisponível'">
+            </div>
+            <div class="product-content">
+                <h3 class="product-name-admin">${product.name}</h3>
+                <div class="product-category-admin">${product.category}</div>
+                <div class="product-price-admin">R$ ${product.price.toFixed(2)}</div>
+                <p class="product-description-admin">${product.description}</p>
+            </div>
             <div class="product-actions">
-                <button class="btn-edit" onclick="editProduct(${product.id})">Editar</button>
-                <button class="btn-delete" onclick="confirmDelete(${product.id})">Excluir</button>
+                <button class="btn-edit" onclick="editProduct(${product.id})">✏️ Editar</button>
+                <button class="btn-delete" onclick="confirmDelete(${product.id})">🗑️ Excluir</button>
             </div>
         </div>
-    `).join('');
+    `;
+    }).join('');
 }
 
 // Add new product
